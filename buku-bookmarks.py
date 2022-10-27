@@ -11,6 +11,12 @@
 # @raycast.icon 🤖
 # @raycast.argument1 { "type": "text", "placeholder": "Query" }
 
+# Documentation:
+# @raycast.description Searches your Buku bookmarks.
+# @raycast.author Harvey Rogers
+# @raycast.authorURL https://github.com/harveyr
+
+
 from pathlib import Path
 import sqlite3
 import sys
@@ -18,6 +24,10 @@ from typing import List
 
 query = sys.argv[1]
 
+# TBD: Use `buku` instead of reading the db manually? Need to figure out the best
+# invocation.
+
+# TBD: DB path on other systems.
 db_path = Path.home() / ".local/share/buku/bookmarks.db"
 
 con = sqlite3.connect(db_path)
