@@ -14,6 +14,7 @@
 from pathlib import Path
 import sqlite3
 import sys
+from typing import List
 
 query = sys.argv[1]
 
@@ -22,10 +23,22 @@ db_path = Path.home() / ".local/share/buku/bookmarks.db"
 con = sqlite3.connect(db_path)
 cur = con.cursor()
 
-for row in cur.execute(
-    "select URL, metadata from bookmarks where metadata like ?", (f"%{query}%", )
-):
-    url, title = row
-    print(f"{title}\n{url}\n\n")
+parts = query.split()
+parts_count = len(parts)
+sql_query_parts = ["select id, URL, metadata from bookmarks"]
+sql_params: List[str] = []
+for i, part in enumerate(parts):
+    sql_params.append(f"%{part}%")
+    if i == 0:
+        sql_query_parts.append("where metadata like ?")
+    else:
+        sql_query_parts.append("and metadata like ?")
+
+
+sql_query = " ".join(sql_query_parts)
+
+for row in cur.execute(sql_query, sql_params):
+    rid, url, title = row
+    print(f"[{rid}] {title}\n{url}\n\n")
 
 con.close()
