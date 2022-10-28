@@ -18,7 +18,9 @@
 url=$(osascript -e 'tell application "Google Chrome" to get URL of active tab of first window')
 
 # https://unix.stackexchange.com/questions/103252/how-do-i-get-a-websites-title-using-command-line
-title=$(wget -qO- "$url" | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si')
+# title=$(wget -qO- "$url" | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si')
+
+title=$(osascript lib/print-chrome-title)
 
 echo "[$title]($url)" | pbcopy
 

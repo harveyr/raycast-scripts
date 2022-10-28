@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+tell application "Google Chrome"
+	execute front window's active tab javascript "document.title;"
+end tell
