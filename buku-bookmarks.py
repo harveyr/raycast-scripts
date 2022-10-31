@@ -44,6 +44,7 @@ for i, part in enumerate(parts):
     else:
         sql_query_parts.append("and metadata like ?")
 
+sql_query_parts.append("order by metadata")
 
 sql_query = " ".join(sql_query_parts)
 
