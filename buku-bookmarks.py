@@ -17,9 +17,9 @@
 # @raycast.authorURL https://github.com/harveyr
 
 
-from pathlib import Path
 import sqlite3
 import sys
+from pathlib import Path
 from typing import List
 
 query = sys.argv[1]
