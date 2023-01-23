@@ -15,7 +15,7 @@
 # @raycast.authorURL https://github.com/harveyr
 
 # https://github.com/raycast/script-commands/blob/master/commands/browsing/chrome-current-page-url.sh
-url=$(osascript -e 'tell application "Google Chrome" to get URL of active tab of first window')
+url=$(osascript lib/print-chrome-url)
 
 # https://unix.stackexchange.com/questions/103252/how-do-i-get-a-websites-title-using-command-line
 # title=$(wget -qO- "$url" | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si')
