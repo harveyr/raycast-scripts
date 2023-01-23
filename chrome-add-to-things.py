@@ -45,6 +45,8 @@ def main():
     payload = {"title": title, "notes": notes}
 
     things_qs = parse.urlencode(payload, quote_via=parse.quote)
+
+    # Docs: https://culturedcode.com/things/support/articles/2803573/
     things_url = f"things:///add?{things_qs}"
 
     subprocess.check_call(["open", things_url])
