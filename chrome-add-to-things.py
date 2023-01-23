@@ -1,4 +1,20 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# Required parameters:
+# @raycast.schemaVersion 1
+# @raycast.title Add Page To Things
+# @raycast.mode silent
+# @raycast.packageName Google Chrome
+#
+# Optional parameters:
+# @raycast.icon ✅
+#
+# Documentation:
+# @raycast.description Add current page URL and title to Things
+# @raycast.author Harvey Rogers
+# @raycast.authorURL https://github.com/harveyr
+
 
 import subprocess
 from urllib import parse

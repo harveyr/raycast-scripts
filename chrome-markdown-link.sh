@@ -7,7 +7,8 @@
 # @raycast.packageName Google Chrome
 #
 # Optional parameters:
-# @raycast.icon 🧭
+# @raycast.icon 🌐
+# Alternatives: ✍
 #
 # Documentation:
 # @raycast.description Copies URL of current Chrome tab into clipboard as a Markdown link.
