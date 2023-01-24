@@ -14,7 +14,15 @@ It's a quick way to get at my bookmarks.
 
 ## [chrome-markdown-link.sh](chrome-markdown-link.sh)
 
-This command gives you a Markdown link to the current Chrome tab.
+This command gives me a Markdown link to the current Chrome tab.
 It uses Applescript to get the tab's title and URL,
-and then dumps the link into your clipboard.
+and then pops the link on your clipboard.
 I use this one a lot!
+
+## [chrome-add-to-things.py](chrome-add-to-things.py)
+
+This command adds the active Chrome tab to my
+[Things](https://culturedcode.com/things/)
+inbox.
+The task title is the webpage title,
+and the page URL is added to the task notes.
