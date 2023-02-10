@@ -1,0 +1,6 @@
+#!/usr/bin/osascript
+
+tell application "Google Chrome"
+  activate
+	set active tab index of first window to 3
+end tell
