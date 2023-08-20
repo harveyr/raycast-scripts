@@ -24,6 +24,6 @@ url=$(osascript lib/print-chrome-url)
 # https://stackoverflow.com/questions/5135609/can-applescript-access-browser-tabs-and-execute-javascript-in-them
 title=$(osascript lib/print-chrome-title)
 
-echo "[$title]($url)" | pbcopy
+echo "[$title]($url)" | tr -d '\n' | pbcopy
 
 echo "Copied"
