@@ -2,7 +2,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Switch to Daily Log Doc
+# @raycast.title Open Work Log Doc (Docs)
 # @raycast.mode silent
 # @raycast.packageName Google Chrome
 #
